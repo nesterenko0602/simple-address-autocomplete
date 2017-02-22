@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Автокомплит</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./dist/asyncAutoComplete.css">
+        <script src="./dist/asyncAutoComplete.js"></script>
+    </head>
+    <body>
+        <h3>Инициализация в div</h3>
+        <div id="autocomplete"></div>
+        <br><br>
+        <h3>Инициализация в input</h3>
+        <input type="text" id="autocomplete_input" value="" name="test">
+
+        <script type="text/javascript">
+            new AddressComplete({
+                selector: '#autocomplete',
+                streetUrl: 'http://vpn.somto.grcc.team/fias_search/ao_autocomplete',
+                houseUrl: 'http://vpn.somto.grcc.team/fias_search/house_autocomplete',
+                minChars: 3,
+                onChangeHouse: function(result) {
+                  console.log(result);
+                },
+                onChangeStreet: function(result) {
+                  console.log(result);
+                }
+            })
+
+            new AddressComplete({
+                selector: '#autocomplete_input',
+                streetUrl: 'http://vpn.somto.grcc.team/fias_search/ao_autocomplete',
+                houseUrl: 'http://vpn.somto.grcc.team/fias_search/house_autocomplete',
+                minChars: 3,
+                onChangeHouse: function(result) {
+                  console.log(result);
+                },
+                onChangeStreet: function(result) {
+                  console.log(result);
+                }
+            })
+        </script>
+    </body>
+</html>

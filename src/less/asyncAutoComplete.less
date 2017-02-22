@@ -1,0 +1,66 @@
+.async-complete {
+	width: 100%;
+	font-size: 18px;
+	line-height: 1.5;
+	border: 1px solid #BBB;
+	// &>div {
+	// 	position: relative;
+	// 	display: flex;
+	// 	justify-content: flex-start;
+	// }
+}
+.async-complete__label {
+	
+}
+.async-complete__input {
+	font-size: 18px;
+	padding: 8px;
+	padding-left: 34px;
+	box-sizing: border-box;
+	border: none;
+	width: 100%;
+}
+
+.async-complete__block {
+	position: relative;
+	width: 100%;
+}
+
+.async-complete__list-wrapper {
+	position: absolute;
+	width: 100%;
+	min-width: 500px;
+	max-height: 400px;
+	overflow-y: scroll;
+	left: 0px;
+	margin-top: 8px;
+	cursor: pointer;
+	background: white;
+	box-shadow: 0 0 0 1px rgba(0,0,0,.1),0 3px 4px -3px rgba(0,0,0,.3);
+	display: none;
+	z-index: 1000;
+	&.async-complete__list-wrapper--nohover {
+		.async-complete__list-item {
+			&:hover {
+				background: transparent;
+			}
+		}
+	}
+	&.active {
+		display: block;
+	}
+}
+
+.async-complete__list-item {
+	padding: 8px;
+	em {
+		font-style: normal;
+		font-weight: bold;
+	}
+	&:hover {
+		background: #eeeeee;
+	}
+	&.active {
+		background: #eeeeee !important;
+	}
+}
